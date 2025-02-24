@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supercharged-test-deployment
+  labels:
+    app: supercharged-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supercharged-test
+  template:
+    metadata:
+      labels:
+        app: supercharged-test
+    spec:
+      containers:
+      - name: supercharged-test-container
+        image: rambooreddy/superchargedtest:v1
+        ports:
+        - containerPort: 80 # Or 5173 if you didnt change the port in your dockerfile.
