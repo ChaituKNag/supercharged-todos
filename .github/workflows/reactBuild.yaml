@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./dockerfile
+          file: ./Dockerfile1
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/superchargedtodo:v1
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/superchargedtodo:latest
