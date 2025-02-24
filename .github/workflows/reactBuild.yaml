@@ -31,7 +31,7 @@ jobs:
 
 
   push:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Push the Docker image
       run: sudo docker push "${{ secrets.DOCKER_HUB_USERNAME }}"/superchargedtodo:v1
