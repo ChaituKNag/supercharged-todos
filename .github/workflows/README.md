@@ -18,14 +18,15 @@ This workflow builds and tests the application on every push to the `main` branc
 ### Docker Build and Push (reactBuild.yml)
 
 This workflow builds and pushes a Docker image to Docker Hub on every push to the `main` branch.
-
+* **Secrets:** goto repository > setting > Secrets and variables > Actions > Repository Secrets 
+    * Add the following secret here based on your dockerhub registry. 
+    * `DOCKER_HUB_USERNAME`
+    * `DOCKER_HUB_TOKEN`
 * **Steps:**
     1.  Checkout code
     2.  Build Docker image
     3.  Push Docker image to Docker Hub
-* **Secrets:**
-    * `DOCKER_HUB_USERNAME`
-    * `DOCKER_HUB_TOKEN`
+
 
 ## Deployment
 
