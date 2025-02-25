@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: supercharged-test-container
-        image: rambooreddy/superchargedtest:v1
+        image: devopsdomino/superchargedtest:v1
         ports:
         - containerPort: 80 # Or 5173 if you didnt change the port in your dockerfile.
